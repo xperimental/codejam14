@@ -16,15 +16,6 @@ type mineConfig struct {
 	mines int
 }
 
-func convInt(input string) (int, error) {
-	val, err := strconv.ParseInt(input, 10, 8)
-	if err != nil {
-		return 0, err
-	} else {
-		return int(val), nil
-	}
-}
-
 func readConfig(input *bufio.Scanner) (mineConfig, error) {
 	var config mineConfig
 	if !input.Scan() {

@@ -41,3 +41,12 @@ func initCases() (*bufio.Scanner, int) {
 }
 
 var columnError = errors.New("Invalid column count!")
+
+func convInt(input string) (int, error) {
+	val, err := strconv.ParseInt(input, 10, 8)
+	if err != nil {
+		return 0, err
+	} else {
+		return int(val), nil
+	}
+}
