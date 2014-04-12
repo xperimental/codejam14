@@ -20,8 +20,6 @@ type board struct {
 	rows [4]row
 }
 
-var columnError = errors.New("Invalid column count!")
-
 func readBoard(input *bufio.Scanner) (int, board, error) {
 	if !input.Scan() {
 		return 0, board{}, io.EOF

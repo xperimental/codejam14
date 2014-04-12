@@ -2,6 +2,7 @@ package main
 
 import (
 	"bufio"
+	"errors"
 	"io"
 	"strconv"
 )
@@ -17,3 +18,5 @@ func readCases(input *bufio.Scanner) (int, error) {
 	}
 	return int(cases), nil
 }
+
+var columnError = errors.New("Invalid column count!")
